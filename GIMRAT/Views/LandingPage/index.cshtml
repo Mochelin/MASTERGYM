@@ -1,0 +1,185 @@
+@{
+	ViewBag.Title = "Home";
+
+	
+	Layout = "~/Views/Shared/_LayoutLanding.cshtml";
+
+}
+
+@section Style {
+
+
+	<link rel="stylesheet" href="~/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="~/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="~/css/owl.carousel.min.css" />
+	<link rel="stylesheet" href="~/css/flaticon.css" />
+	<link rel="stylesheet" href="~/css/slicknav.min.css" />
+
+
+	<link rel="stylesheet" href="~/css/style2.css" />
+}
+<body style="background-color:#000000;">
+
+	<div id="preloder">
+	<div class="loader"></div>
+	</div>
+
+	<div class="clearfix"></div>
+	<!-- Header section end -->
+	<!-- Hero section -->
+	<section class="hero-section set-bg" data-setbg="img/hero-bg.jpg">
+		<div class="container">
+			<div class="hero-text">
+				<h2 class="text-white h2">Actividad Física</h2>
+				<h2 class="text-white h2">Entrenamiento <span class="text-white span">¡Energía Positiva!</span></h2>
+				<a asp-controller="LandingPage" asp-action="contact" class="site-btn">Ingresa</a>
+			</div>
+		</div>
+	</section>
+	<!-- Hero section end -->
+	<!-- Feature section -->
+	<section class="feature-section">
+		<div class="container">
+			<div class="row justify-content-md-center">
+				<div class="col-lg-8">
+					<div class="section-title text-center">
+						<h2 class="text-white h2">El <span class="text-black span">verdadero entrenamiento</span> empieza cuando quieres parar.</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4">
+					<div class="icon-box-item">
+						<div class="ib-icon">
+							<i class="flaticon-004-dumbbell"></i>
+						</div>
+						<h4 class="text-white h4">Musculatura</h4>
+						<p class="text-white p">Tenemos maquinas de ejercicios especializadas para el aumento de musculatura.</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="icon-box-item">
+						<div class="ib-icon">
+							<i class="flaticon-031-app-1"></i>
+						</div>
+						<h4 class ="text-white h4">Cardio</h4>
+						<p class="text-white p">Te entregamos las mejores herramientas y guias para un entrenamiento especializado.</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="icon-box-item">
+						<div class="ib-icon">
+							<i class="flaticon-010-podium"></i>
+						</div>
+						<h4 class="text-white h4">Competicion</h4>
+						<p class="text-white p">Tenemos instructores especializados en el ambito de la competencia, ademas nuestros instructores tienen logros destacados en distintas areas del fisico culturismo.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Feature section end -->
+	<!-- Add section -->
+	<section class="add-section set-bg" data-setbg="img/add-bg.jpg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-7 ml-auto">
+					<div class="add-text">
+						<h2 class="text-white h2">Paga ahora y obtén un <span>Hasta 25% de descuento</span></h2>
+						<ul>
+							<li class="text-white li"><img src="img/check-icon.png" alt="">Asesoria fisica.</li>
+							<li class="text-white li"><img src="img/check-icon.png" alt="">Guia de entrenamiento.</li>
+							<li class="text-white li"><img src="img/check-icon.png" alt="">Seguimiento de progreso.</li>
+						</ul>
+						<a href="#" class="site-bt">Hazte Miembro</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Add section end -->
+	<!-- Milestones section -->
+	<section class="milestones-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-sm-6">
+					<div class="milestone">
+						<h2>1374</h2>
+						<p >Clientes Felices</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="milestone">
+						<h2 >356</h2>
+						<p>Cuerpos Fuertes</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="milestone">
+						<h2>1.2k</h2>
+						<p>Seguidores en IG</p>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</section>
+	<!-- Milestones section end -->
+	<!-- Trainers section -->
+	<section class="trainers-section">
+		<div class="container">
+			<div class="section-title text-center">
+				<h2 class="text-white h2">Conoce a los <span class="text-black">Entrenadores</span></h2>
+			</div>
+		</div>
+	</section>
+	<!-- Trainers section end -->
+	<!-- BMI section -->
+	<section class="bmi-section spad">
+		<div class="bmi-bg set-bg" data-setbg="img/bmi-bg.jpg"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-7 ml-auto">
+					<div class="section-title mb-0">
+						<h2>Calcula tu <span>IMC</span></h2>
+						<p>El índice de masa corporal (IMC) es un método para evaluar la categoría de peso de una persona, en base a su peso y estatura.</p>
+					</div>
+					<div class="bmi-calculator-warp">
+						<div class="bmi-calculator">
+							<div class="row">
+								<div class="col-sm-6">
+									<input type="text" placeholder="Peso (KG)" id="bmi-weight">
+								</div>
+								<div class="col-sm-6">
+									<input type="text" placeholder="Altura (M)" id="bmi-hight">
+								</div>
+								<div class="col-sm-6">
+									<button class="site-btn" id="bmi-submit">Calcular</button>
+								</div>
+								<div class="col-sm-6">
+									<input type="text" id="bmi-result" readonly>
+								</div>
+							</div>
+							<p>El IMC es una herramienta de screening, no un diagnóstico definitivo de salud. Para evaluar el riesgo de enfermedad y diagnosticar el estado de la enfermedad, se debe consultar a un proveedor de atención médica.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- BMI section end -->
+
+
+    <script src="/views/main.js"></script>
+
+	<!-- Footer section end -->
+									
+	<!--====== Javascripts & Jquery ======-->
+	<script src="~/js/jquery-3.2.1.min.js"></script>
+	<script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="~/js/jquery.slicknav.js"></script>
+	<script src="~/js/owl.carousel.min.js"></script>
+	<script src="~/js/circle-progress.min.js"></script>
+	<script src="~/views/main.js"></script>
+	</body>
+

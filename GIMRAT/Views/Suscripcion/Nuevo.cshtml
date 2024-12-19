@@ -1,0 +1,131 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<body>
+<div class="row mt-4">
+    <div class="col-sm-12">
+        
+        <div class="card">
+              
+            <div class="card-body bg-light d-flex justify-content-end align-items-end">
+                <h5 class="card-title d-flex justify-content-Start align-items-start me-auto">Nueva Suscripcion      </h5>
+                <a class="btn btn-dark" asp-controller="Suscripcion" asp-action="ClienteSuscrito"><i class="fa-solid fa-rotate-left"></i> Volver</a>
+                <button class="btn btn-primary ms-2" type="button" id="btnRegistrar"><i class="fa-solid fa-check"></i> Registrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-sm-6">
+        <div class="card mb-4" id="cardCliente">
+            <div class="card-header">
+                <i class="fa-solid fa-user"></i>
+                Cliente
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <label for="txtNroDocumento" class="form-label">Numero Documento:</label>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control data-in" id="txtNroDocumento" autocomplete="off" name="Numero_Documento">
+                            <button class="btn btn-secondary" type="button" id="btnBuscar"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </div>
+                        <div class="mb-3">
+                            <label for="txtNombre" class="form-label">Nombre:</label>
+                            <input type="text" class="form-control data-in" id="txtNombre" autocomplete="off" disabled>
+                        </div>
+                        <div class="mb-3">
+                            <label for="txtApellido" class="form-label">Apellido:</label>
+                            <input type="text" class="form-control data-in" id="txtApellido" autocomplete="off" name="Apellido" disabled>
+                        </div>
+                        <div class="mb-3">
+                            <label for="txtCorreo" class="form-label">Correo:</label>
+                            <input type="text" class="form-control data-in" id="txtCorreo" autocomplete="off" name="Correo" disabled>
+                        </div>
+                        <div class="mb-3">
+                            <label for="txtTelefono" class="form-label">Telefono:</label>
+                            <input type="text" class="form-control data-in" id="txtTelefono" autocomplete="off" name="Telefono" disabled>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card mb-4">
+            <div class="card-header">
+                <i class="fa-solid fa-file-invoice"></i>
+                Suscripcion
+            </div>
+     
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="mb-6">
+                            <label for="cboTipoPlan" class="form-label">Tipo Plan:</label>
+                            <select class="form-select data-suscripcion" id="cboTipoPlan" name="Tipo_Plan">
+                                <option value="0">Seleccione un plan</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <label for="txtFechaInicio" class="form-label">Fecha Inicio:</label>
+                            <input type="date" class="form-control data-plan" id="txtFechaInicio" name="Fecha_Inicio">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="mb-6">
+                            <label for="txtFechaInicio" class="form-label">Fecha Fin:</label>
+                            <input type="date" class="form-control data-plan" id="txtFechaFin" name="Fecha_Fin" disabled>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div class="row align-items-end">
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-secondary" id="btnCalcular"><i class="fa-solid fa-square-root-variable"></i> Calcular</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <label for="txtValorPlan" class="form-label">Valor Plan:</label>
+                            <input type="text" class="form-control data-in" id="txtValorPlan" name="ValorPlan" disabled>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <label for="txtDescuento" class="form-label">Descuento:</label>
+                            <input type="text" class="form-control data-in" id="txtDescuento" name="Descuento" >
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="mb-3">
+                            <label for="txtMontoTotal" class="form-label">Monto Total:</label>
+                            <input type="text" class="form-control data-in" id="txtMontoTotal" name="MontoTotal" disabled>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+@section Scripts {
+    <script src="~/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/datatables2/js/datatables.js"></script>
+    <script src="~/lib/moment/moment.min.js"></script>
+    <script src="~/views/NuevaSuscripcion2.js"></script>
+}

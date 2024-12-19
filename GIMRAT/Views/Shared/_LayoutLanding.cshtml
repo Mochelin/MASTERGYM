@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>MASTERSGIM</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Landing page MASTERGIM">
+	<meta name="keywords" content="fitness, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Favicon -->
+	<link href="img/MasterGIM/LOGO2.jpg" rel="shortcut icon" />
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="~/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="~/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="~/css/owl.carousel.min.css" />
+	<link rel="stylesheet" href="~/css/flaticon.css" />
+	<link rel="stylesheet" href="~/css/slicknav.min.css" />
+	
+	<!-- Main Stylesheets -->
+	<link rel="stylesheet" href="~/css/style2.css" />
+	@RenderSection("Style", required: false)
+	
+
+</head>
+
+<body style ="background-color:#000000;">
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+	<!-- Header section -->
+	<header class="header-section">
+		<a asp-controller="LandingPage" asp-action="Index" class="site-logo">
+			<img src="~/img/MasterGIM/LOGO.webp" alt="mastergim-logo" style="width: 75px;">
+		</a>
+		<ul class="main-menu">
+			<li><a class="active text-black a" asp-controller="LandingPage" asp-action="Index">Inicio</a></li>
+			<li class="text-white-li"><a asp-controller="LandingPage" asp-action="classes" class="text-white a">Planes</a></li>
+			<li class="text-white-li"><a asp-controller="LandingPage" asp-action="contact" class="text-white a">Contáctanos</a></li>
+			<li class="text-white-li"><a asp-controller="Login" asp-action="Index" class="text-white a">Administrador</a></li>
+			<li class="header-right">
+				<div class="hr-box">
+					<img src="~/img/location-icon.png" alt="">
+					<h6>Batallón Atacama 80, Caldera, Atacama</h6>
+				</div>
+			</li>
+		</ul>
+	</header>
+
+	<main>
+
+		<div class="container-fluid px-4">
+			@RenderBody()
+		</div>
+
+		<footer>
+		
+			
+			<section>
+			<div class="col-lg-3 col-sm-6">
+				<div class="footer-widget">
+					<h4 class="text-white h4">E-mail</h4>
+					<div class="fw-info-box">
+						<img src="~/img/icons/3.png" alt="">
+						<div class="fw-info-text">
+							<p class="text-white p">Mastersgyms.gmail.com</p>
+							<p class="text-white p">www.MastersGYM.com</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-sm-6">
+				<div class="footer-widget">
+					<h4 class="text-white h4">Redes Sociales</h4>
+					<div class="fw-info-box">
+						<img src="~/img/icons/4.png" alt="">
+						<div class="social-links">
+
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="https://www.instagram.com/masters_gym_/"><i class="fa fa-instagram"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			</section>
+		</footer>
+
+	</main>
+	
+	<!--====== Javascripts & Jquery ======-->
+	<script src="~/js/jquery-3.2.1.min.js"></script>
+	<script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="~/js/jquery.slicknav.js"></script>
+	<script src="~/js/owl.carousel.min.js"></script>
+	<script src="~/js/circle-progress.min.js"></script>
+	<script src="~/views/main.js"></script>
+</body>
+
+
+
+
+
+
+</html>

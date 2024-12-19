@@ -1,0 +1,102 @@
+﻿@*@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Planes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Estilos {
+    <link href="~/lib/datatables2/css/datatables.datatables.css " rel="stylesheet" />
+}
+<body>
+    <div class="row mt-4">
+        <div class="col-sm-12">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <i class="fa-solid fa-user-group"></i>
+                    Lista de Planes
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <button class="btn btn-success" id="btnNuevo"> <i class="fa-solid fa-plus"></i>  Nuevo Plan</button>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <table class="display cell-border" id="tbData" cellspacing="0" style="width:100%">
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="mdData" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Planes</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label class="col-form-label">Plan:</label>
+                            <input type="text" class="form-control data-in" id="txtPlan" autocomplete="off" name="Plan">
+                        </div>
+                        <div class="col-sm-6">
+                            <label class="col-form-label">Descripción:</label>
+                            <input type="text" class="form-control data-in" id="txtDescripcion" autocomplete="off" name="Nombre">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label class="col-form-label">Duracion (DIAS):</label>
+                            <input type="text" class="form-control data-in" id="txtDias" autocomplete="off" name="Duracion">
+                        </div>
+                        <div class="col-sm-6">
+                            <label class="col-form-label">Valor:</label>
+                            <input type="email" class="form-control data-in" id="txtValor" autocomplete="off" name="Valor">
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-auto">
+                                <div class="form-group">
+                                    <label for="txtEstado">Estado:</label>
+                                    <select id="txtEstado" class="form-control data-in">
+                                        <option value="1">Activo</option>
+                                        <option value="0">No Activo</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                   
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" id="btnGuardar">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+@section Scripts {
+
+
+
+    <script src="~/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/datatables2/js/moment.min.js"></script>
+    <script src="~/lib/datatables2/js/datatables.js"></script>
+    <script src="~/views/Planes.js"></script>
+
+}   

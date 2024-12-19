@@ -1,0 +1,97 @@
+﻿@{
+    ViewBag.Title = "Suscripcion";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Estilos {
+    <link href="~/lib/datatables2/css/datatables.datatables.css " rel="stylesheet" />
+}
+<body>
+<div class="row mt-4">
+    <div class="col-sm-12">
+        <div class="card mb-4">
+            <div class="card-header">
+                <i class="fa-solid fa-dollar-sign"></i>
+                Lista de suscripciones
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <a class="btn btn-success" asp-controller="Suscripcion" asp-action="Nuevo">
+                            <i class="fa-solid fa-plus"></i> Nueva Suscripcion
+                        </a>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-sm-12">
+                        <table class="display cell-border" id="tbData" cellspacing="0" style="width:100%">
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="mdData" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="txtid_suscripcion"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+
+                    <div class="col-sm-6">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="txtTipo" placeholder="Tipo" disabled>
+                            <label for="floatingInput">Tipo de suscripcion:</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="txtDuracion" placeholder="Dias" disabled>
+                            <label for="floatingInput">Duracion (Dias):</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="txtMontoTotal" placeholder="Monto Total" disabled>
+                            <label for="floatingInput">Monto Total:</label>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+
+                        <table class="table table-striped" id="tbDetalle">
+                            <thead>
+                                <tr>
+                                    <th>Codigo de suscripcion</th>
+                                    <th>Fecha de Inicio</th>
+                                     <th>Fecha finalizacion</th>
+                                    <th>Monto</th>
+                                    <th>Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
+                <button type="button" class="btn btn-primary" id="btnImprimir">Imprimir</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+@section Scripts {
+    <script src="~/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/datatables2/js/moment.min.js"></script>
+    <script src="~/lib/datatables2/js/datatables.js"></script>
+    <script src="~/views/suscripcion.js"></script>
+}
